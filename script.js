@@ -7,7 +7,7 @@ function getLocalStorage(key) {
 
 $( document ).ready(function() {
     $("#currentDay").text(moment().format("dddd, MMMM Do"));
-    for (let i = 9; i < 18; i++) {
+  
     
         // create a row
         var row = $(`<div data-time=${i} id='${i}' class="row">`);
@@ -44,11 +44,7 @@ function updateColors(){
         var currentTime = new Date().getHours();
         for (var i = 9; i < 18; i++) { 
         console.log(currentTime, $(`#${i}`).data("time"));
-         if ($(`#${i}`).data("time") == currentTime){
-            $(`#text${i}`).addClass( "present");
-        } else if (currentTime < $(`#${i}`).data("time")) {
-            $(`#text${i}`).addClass( "future");
-        }
+        
     }
 }
 
